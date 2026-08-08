@@ -179,3 +179,25 @@
     display: none !important;
   }
 }
+
+/* Restore standard cursor when dialog is open (fixes Top Layer z-index overlay issue) */
+body.dialog-open.custom-cursor-active,
+body.dialog-open.custom-cursor-active * {
+  cursor: auto !important;
+}
+
+body.dialog-open.custom-cursor-active a,
+body.dialog-open.custom-cursor-active button,
+body.dialog-open.custom-cursor-active label,
+body.dialog-open.custom-cursor-active input,
+body.dialog-open.custom-cursor-active select,
+body.dialog-open.custom-cursor-active textarea,
+body.dialog-open.custom-cursor-active .dialog-close-btn {
+  cursor: pointer !important;
+}
+
+body.dialog-open .custom-cursor,
+body.dialog-open .custom-cursor-ring {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}

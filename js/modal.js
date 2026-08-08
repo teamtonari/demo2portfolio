@@ -24,14 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
     metaEl.textContent = `${work.category} / ${work.year}`;
     descEl.textContent = work.description;
 
-    // Load iframe video dynamically to avoid page-load lag and allow autoplay
+    // Load work image dynamically
     videoWrapper.innerHTML = `
-      <iframe 
-        src="${work.videoUrl}" 
-        title="${work.title} video playback" 
-        allow="autoplay; fullscreen; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
+      <img 
+        src="${work.thumbnail}" 
+        alt="${work.title} scene frame" 
+        style="width: 100%; height: 100%; object-fit: cover;"
+      />
     `;
 
     // Show native modal
