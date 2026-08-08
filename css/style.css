@@ -822,13 +822,15 @@ p.ja {
 
 .client-item {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
   font-weight: 350;
   color: var(--text-color);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   text-align: left;
   border-left: 2px solid var(--border-color);
   padding-left: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Contact Form Section */
@@ -980,12 +982,10 @@ textarea.form-control {
   color: var(--text-color);
   max-width: 900px;
   width: calc(100% - 4rem);
-  margin: auto;
   outline: none;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  margin: auto;
   z-index: 200;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
@@ -1001,11 +1001,11 @@ textarea.form-control {
 @keyframes modal-appear {
   from {
     opacity: 0;
-    transform: translate(-50%, -45%) scale(0.96);
+    transform: translateY(20px) scale(0.96);
   }
   to {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -1263,5 +1263,17 @@ body.dialog-open {
   
   .dialog-content {
     padding: 1.8rem;
+  }
+  
+  .clients-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-list {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 }
