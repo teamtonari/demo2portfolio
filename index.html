@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAGI FILM | Film Director & Visual Artist Portfolio</title>
+  <meta name="description" content="映画、ミュージックビデオ、広告映像を手がける映像作家・フィルムディレクター NAGI FILM（青山凪）の公式ポートフォリオサイト。「映画の余白」をテーマに、言葉にならない感情や時間を映像として切り取ります。">
+  
+  <!-- OGP Settings -->
+  <meta property="og:title" content="NAGI FILM | Film Director Portfolio">
+  <meta property="og:description" content="映画、ミュージックビデオ、広告映像を手がける映像作家・フィルムディレクター NAGI FILM の公式ポートフォリオサイト。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nagi-film.example.com/">
+  <meta property="og:image" content="assets/images/hero.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23111111%22/><circle cx=%2250%22 cy=%2250%22 r=%2220%22 fill=%22none%22 stroke=%22%23F5F5F2%22 stroke-width=%224%22/><circle cx=%2250%22 cy=%2250%22 r=%228%22 fill=%22%23F5F5F2%22/></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="fade-in-load">
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="NAGI FILM HOME">NAGI FILM<span>.</span></a>
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">HOME</a></li>
+          <li><a href="works.html">WORKS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="about.html#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+    <ul class="drawer-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="works.html">WORKS</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="about.html#contact">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Introduction Video">
+      <img src="assets/images/hero.jpg" alt="Tokyo mist-covered night street with reflective wet asphalt, representing the cinematic vision of Nagi Film" class="hero-background parallax-bg">
+      <div class="hero-content container">
+        <div class="reveal-item" style="transition-delay: 0.2s;">
+          <h1 class="hero-title">NAGI FILM</h1>
+          <div class="hero-meta">
+            <p class="hero-subtitle">Film Director / Tokyo</p>
+            <p class="hero-location">TOKYO / OSAKA</p>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- Selected Works Section -->
+    <section class="selected-works" aria-labelledby="selected-works-heading">
+      <div class="container">
+        <span class="section-label" id="selected-works-heading">Selected Works</span>
+        
+        <div class="works-list-wide">
+          
+          <!-- Work 01: Echoes -->
+          <article class="work-card-wide reveal-on-scroll reveal-item" onclick="openWorkModal('echoes')" aria-label="ECHOES (Short Film)">
+            <div class="work-image-container image-reveal-on-scroll image-reveal">
+              <img src="assets/images/echoes.jpg" alt="Scene frame from short film ECHOES" class="work-image">
+            </div>
+            <div class="work-info">
+              <span class="work-num">01</span>
+              <button class="work-title-link">
+                <h3 class="work-title">ECHOES</h3>
+              </button>
+              <div class="work-meta">
+                <span>Short Film</span>
+                <span>2026</span>
+              </div>
+              <p class="ja text-muted">沈黙と眼差しが紡ぎ出す、言葉にならない感情のポートレート。モノトーンの光と影で描く、静かなる映像詩。</p>
+            </div>
+          </article>
+
+          <!-- Work 02: Blue Hour -->
+          <article class="work-card-wide reveal-on-scroll reveal-item" onclick="openWorkModal('blue-hour')" aria-label="BLUE HOUR (Music Video)">
+            <div class="work-image-container image-reveal-on-scroll image-reveal">
+              <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=85" alt="Night skyline lights representing music video Blue Hour" class="work-image">
+            </div>
+            <div class="work-info">
+              <span class="work-num">02</span>
+              <button class="work-title-link">
+                <h3 class="work-title">BLUE HOUR</h3>
+              </button>
+              <div class="work-meta">
+                <span>Music Video</span>
+                <span>2026</span>
+              </div>
+              <p class="ja text-muted">夜から朝へと移り変わる瞬間の『青』を捉えたミュージックビデオ。孤独と夜明けのグラデーション。</p>
+            </div>
+          </article>
+
+          <!-- Work 03: Distance -->
+          <article class="work-card-wide reveal-on-scroll reveal-item" onclick="openWorkModal('distance')" aria-label="DISTANCE (Commercial Film)">
+            <div class="work-image-container image-reveal-on-scroll image-reveal">
+              <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=85" alt="Minimalist fashion frame representing commercial movie Distance" class="work-image">
+            </div>
+            <div class="work-info">
+              <span class="work-num">03</span>
+              <button class="work-title-link">
+                <h3 class="work-title">DISTANCE</h3>
+              </button>
+              <div class="work-meta">
+                <span>Commercial Film</span>
+                <span>2025</span>
+              </div>
+              <p class="ja text-muted">アパレルブランドの秋冬ランウェイに向けたコンセプトムービー。都会の人混みと個人の距離をエモーショナルに切り取る。</p>
+            </div>
+          </article>
+
+          <!-- Work 04: After Rain -->
+          <article class="work-card-wide reveal-on-scroll reveal-item" onclick="openWorkModal('after-rain')" aria-label="AFTER RAIN (Short Film)">
+            <div class="work-image-container image-reveal-on-scroll image-reveal">
+              <img src="https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?auto=format&fit=crop&w=1200&q=85" alt="Rainy city scenery representing short film After Rain" class="work-image">
+            </div>
+            <div class="work-info">
+              <span class="work-num">04</span>
+              <button class="work-title-link">
+                <h3 class="work-title">AFTER RAIN</h3>
+              </button>
+              <div class="work-meta">
+                <span>Short Film</span>
+                <span>2025</span>
+              </div>
+              <p class="ja text-muted">雨上がりのアスファルトに反射する光。日常に潜む静かな再生の瞬間を、16mmフィルムの粒状感で描く。</p>
+            </div>
+          </article>
+
+        </div>
+        
+        <div style="text-align: center; margin-top: 6rem;" class="reveal-on-scroll reveal-item">
+          <a href="works.html" class="button-link">
+            View All Works
+            <svg width="24" height="8" viewBox="0 0 24 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M23.3536 4.35355C23.5488 4.15829 23.5488 3.84171 23.3536 3.64645L20.1716 0.464466C19.9763 0.269204 19.6597 0.269204 19.4645 0.464466C19.2692 0.659728 19.2692 0.976311 19.4645 1.17157L22.2929 4L19.4645 6.82843C19.2692 7.02369 19.2692 7.34027 19.4645 7.53553C19.6597 7.7308 19.9763 7.7308 20.1716 7.53553L23.3536 4.35355ZM0 4.5H23V3.5H0V4.5Z" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement Section -->
+    <section class="statement-section" aria-label="Director Statement">
+      <div class="container statement-content reveal-on-scroll reveal-item">
+        <p class="statement-en">Stories live in the spaces between words.</p>
+        <p class="statement-ja">言葉にならない時間や感情を、<br>映像として残していく。</p>
+      </div>
+    </section>
+
+    <!-- Profile Preview Section -->
+    <section class="profile-preview" aria-labelledby="profile-preview-heading">
+      <div class="container">
+        <span class="section-label" id="profile-preview-heading">Profile</span>
+        <div class="profile-preview-grid reveal-on-scroll reveal-item">
+          <div class="profile-img-container image-reveal">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Nagi Aoyama Portrait" class="profile-img">
+          </div>
+          <div class="profile-desc">
+            <h3 class="profile-name">Nagi Aoyama</h3>
+            <p class="profile-title">Film Director / Visual Artist</p>
+            <p class="profile-text ja text-muted">
+              映画、MV、広告映像を中心に活動する映像ディレクター。人物の感情や、その場に流れる空気感と余白を大切にした映像制作を行う。映画館を出た後に心に残る「光線の余韻」のような作品を目指している。
+            </p>
+            <a href="about.html" class="button-link">
+              Read Biography
+              <svg width="24" height="8" viewBox="0 0 24 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M23.3536 4.35355C23.5488 4.15829 23.5488 3.84171 23.3536 3.64645L20.1716 0.464466C19.9763 0.269204 19.6597 0.269204 19.4645 0.464466C19.2692 0.659728 19.2692 0.976311 19.4645 1.17157L22.2929 4L19.4645 6.82843C19.2692 7.02369 19.2692 7.34027 19.4645 7.53553C19.6597 7.7308 19.9763 7.7308 20.1716 7.53553L23.3536 4.35355ZM0 4.5H23V3.5H0V4.5Z" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta" aria-labelledby="contact-cta-heading">
+      <div class="container reveal-on-scroll reveal-item">
+        <h2 class="contact-cta-title" id="contact-cta-heading">LET'S WORK TOGETHER.</h2>
+        <a href="about.html#contact" class="contact-cta-btn">Contact</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-logo">NAGI FILM<span>.</span></p>
+          <p style="margin-top: 1rem; opacity: 0.5; font-size: 0.9rem;" class="ja">映像作家・フィルムディレクター</p>
+        </div>
+        <div class="footer-nav">
+          <span class="footer-nav-label">Navigation</span>
+          <ul class="footer-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="works.html">WORKS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="about.html#contact">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <span class="footer-nav-label">Socials</span>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://vimeo.com" target="_blank" rel="noopener noreferrer">Vimeo</a></li>
+            <li><a href="mailto:info@nagifilm.example.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 NAGI FILM. All Rights Reserved.</p>
+        <p class="demo-tag">Demo Project / Portfolio for <a href="https://tonari.example.com" target="_blank" style="text-decoration: underline;">となり</a> (※架空のポートフォリオサイトです)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Works Dynamic Modal (<dialog>) -->
+  <dialog id="works-dialog" class="works-dialog" aria-labelledby="modal-title" aria-modal="true">
+    <div class="dialog-container">
+      <div class="dialog-video-wrapper">
+        <!-- Dynamically injected iframe -->
+      </div>
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <div class="dialog-title-group">
+            <h2 id="modal-title" class="dialog-title">Loading Title...</h2>
+            <span class="dialog-meta">Loading Meta...</span>
+          </div>
+          <button class="dialog-close-btn" aria-label="Close dialog">
+            <svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L9 9M9 1L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <p class="dialog-description">Loading Description...</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Script Imports -->
+  <script src="js/data.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

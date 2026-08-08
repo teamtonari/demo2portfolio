@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WORKS | NAGI FILM</title>
+  <meta name="description" content="映像作家・フィルムディレクター NAGI FILM（青山凪）の制作実績一覧。短編映画、ミュージックビデオ、ブランド広告映像など、余白と光線にこだわった作品を掲載しています。">
+  
+  <!-- OGP Settings -->
+  <meta property="og:title" content="WORKS | NAGI FILM">
+  <meta property="og:description" content="映像作家・フィルムディレクター NAGI FILM の制作実績一覧。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nagi-film.example.com/works.html">
+  <meta property="og:image" content="assets/images/hero.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23111111%22/><circle cx=%2250%22 cy=%2250%22 r=%2220%22 fill=%22none%22 stroke=%22%23F5F5F2%22 stroke-width=%224%22/><circle cx=%2250%22 cy=%2250%22 r=%228%22 fill=%22%23F5F5F2%22/></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="fade-in-load">
+
+  <!-- Header (styled as subpage for immediate background styling) -->
+  <header class="site-header subpage" role="banner">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="NAGI FILM HOME">NAGI FILM<span>.</span></a>
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="works.html" class="active">WORKS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="about.html#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+    <ul class="drawer-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="works.html">WORKS</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="about.html#contact">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    
+    <!-- Works Hero Section -->
+    <section class="works-page-hero">
+      <div class="container">
+        <span class="section-label">Index</span>
+        <h1 style="margin-bottom: 2rem;">WORKS</h1>
+        <p class="ja text-muted" style="max-width: 600px; line-height: 1.8;">
+          映画、ミュージックビデオ、コマーシャルフィルムの監督実績。光と影、そして時間の流れを切り取った作品群です。
+        </p>
+      </div>
+    </section>
+
+    <!-- Works Grid Section -->
+    <section class="works-grid-section">
+      <div class="container">
+        <div id="works-grid" class="works-grid">
+          <!-- Dynamic works injected here by inline script -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta" aria-labelledby="contact-cta-heading">
+      <div class="container reveal-on-scroll reveal-item">
+        <h2 class="contact-cta-title" id="contact-cta-heading">LET'S WORK TOGETHER.</h2>
+        <a href="about.html#contact" class="contact-cta-btn">Contact</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-logo">NAGI FILM<span>.</span></p>
+          <p style="margin-top: 1rem; opacity: 0.5; font-size: 0.9rem;" class="ja">映像作家・フィルムディレクター</p>
+        </div>
+        <div class="footer-nav">
+          <span class="footer-nav-label">Navigation</span>
+          <ul class="footer-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="works.html">WORKS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="about.html#contact">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <span class="footer-nav-label">Socials</span>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://vimeo.com" target="_blank" rel="noopener noreferrer">Vimeo</a></li>
+            <li><a href="mailto:info@nagifilm.example.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 NAGI FILM. All Rights Reserved.</p>
+        <p class="demo-tag">Demo Project / Portfolio for <a href="https://tonari.example.com" target="_blank" style="text-decoration: underline;">となり</a> (※架空のポートフォリオサイトです)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Works Dynamic Modal (<dialog>) -->
+  <dialog id="works-dialog" class="works-dialog" aria-labelledby="modal-title" aria-modal="true">
+    <div class="dialog-container">
+      <div class="dialog-video-wrapper">
+        <!-- Dynamically injected iframe -->
+      </div>
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <div class="dialog-title-group">
+            <h2 id="modal-title" class="dialog-title">Loading Title...</h2>
+            <span class="dialog-meta">Loading Meta...</span>
+          </div>
+          <button class="dialog-close-btn" aria-label="Close dialog">
+            <svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L9 9M9 1L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <p class="dialog-description">Loading Description...</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Script Imports -->
+  <script src="js/data.js"></script>
+  
+  <!-- Grid population script (executed before main.js for IntersectionObserver compatibility) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const grid = document.getElementById("works-grid");
+      if (!grid || !window.WORKS_DATA) return;
+      
+      grid.innerHTML = window.WORKS_DATA.map((work, index) => {
+        // Distribute animation delay for nice initial staggered reveal
+        const delay = (index % 3) * 0.15;
+        return `
+          <article class="work-card reveal-on-scroll reveal-item" onclick="openWorkModal('${work.id}')" aria-label="${work.title} (${work.category})" style="transition-delay: ${delay}s;">
+            <div class="work-image-container image-reveal-on-scroll image-reveal">
+              <img src="${work.thumbnail}" alt="Scene frame from ${work.title}" class="work-image" loading="lazy">
+            </div>
+            <div class="work-card-info">
+              <div class="work-card-title-group">
+                <h3 class="work-card-title">${work.title}</h3>
+                <span class="work-card-cat">${work.category}</span>
+              </div>
+              <span class="work-card-year">${work.year}</span>
+            </div>
+          </article>
+        `;
+      }).join('');
+    });
+  </script>
+
+  <script src="js/modal.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

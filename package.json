@@ -1,0 +1,22 @@
+{
+  "name": "nagi-film-portfolio",
+  "version": "1.0.0",
+  "description": "Fictional portfolio website for NAGI FILM by Web Design Team Tonari.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "portfolio",
+    "minimalist",
+    "cinematic",
+    "tonari"
+  ],
+  "author": "Web Design Team Tonari",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

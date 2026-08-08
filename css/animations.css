@@ -1,0 +1,181 @@
+/* --- Animation States & Base Transitions --- */
+
+/* Page Load Fade In */
+.fade-in-load {
+  opacity: 0;
+  animation: load-fade 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes load-fade {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Base scroll reveal class used by JS IntersectionObserver fallback */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-reveal img {
+  opacity: 0;
+  transform: scale(1.15);
+  transition: opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-reveal.revealed img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Image sliding clip reveal */
+.clip-reveal {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clip-reveal.revealed {
+  clip-path: inset(0 0 0 0);
+}
+
+/* --- Native CSS Scroll-Driven Animations (Progressive Enhancement) --- */
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    /* Override transition styles for browsers that support native scroll animations */
+    .reveal-on-scroll {
+      animation: scroll-fade-in-up auto linear forwards;
+      animation-timeline: view();
+      animation-range: entry 10% cover 30%;
+    }
+    
+    .image-reveal-on-scroll {
+      animation: scroll-image-clip auto linear forwards;
+      animation-timeline: view();
+      animation-range: entry 10% cover 40%;
+    }
+    
+    .parallax-bg {
+      animation: parallax-scroll auto linear forwards;
+      animation-timeline: view();
+      animation-range: exit 0% exit 100%;
+    }
+    
+    /* Disable JS fallback changes since native timeline handles it */
+    .reveal-item,
+    .image-reveal img,
+    .clip-reveal {
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+      clip-path: none !important;
+    }
+  }
+}
+
+/* Scroll Animation Keyframes */
+@keyframes scroll-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-image-clip {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes parallax-scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(120px);
+  }
+}
+
+/* --- Cinematic Custom Cursor --- */
+.custom-cursor {
+  width: 8px;
+  height: 8px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+.custom-cursor-ring {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(17, 17, 17, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.1s cubic-bezier(0.25, 1, 0.5, 1), 
+              width 0.3s ease, 
+              height 0.3s ease, 
+              border-color 0.3s ease, 
+              background-color 0.3s ease;
+}
+
+/* Hover States for Custom Cursor */
+.custom-cursor.hover {
+  width: 0px;
+  height: 0px;
+}
+
+.custom-cursor-ring.hover {
+  width: 70px;
+  height: 70px;
+  border-color: var(--text-color);
+  background-color: rgba(17, 17, 17, 0.05);
+}
+
+/* Dark layout adjustments for cursor */
+.contact-cta-cursor .custom-cursor {
+  background-color: var(--white);
+}
+
+.contact-cta-cursor .custom-cursor-ring {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-cta-cursor .custom-cursor-ring.hover {
+  border-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Hide cursor on mobile devices */
+@media (pointer: coarse) {
+  .custom-cursor,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+}
